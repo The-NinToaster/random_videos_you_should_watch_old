@@ -9,6 +9,7 @@ turtle.style.top = initbound.height - 410 + 'px'
 
 var saul = document.getElementById("Saul")
 
+
 function togglePlay()
 {
     return saul.paused ? saul.play() : saul.pause();
@@ -18,7 +19,11 @@ const ctx = canvas.getContext("2d")
 let prevX = null
 let prevY = null
 
-
+let clear = document.querySelector(".clear")
+clear.addEventListener("click", () =>
+{
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+})
 
 ctx.lineWidth = 5
 
