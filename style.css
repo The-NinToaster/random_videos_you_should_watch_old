@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.clr{
+    height: 30px;
+    width: 30px;
+    background-color: aqua;
+}
+
+#follow{
+    position: absolute;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#img
+{
+    pointer-events: none;
+    user-select: none;
+}
+
+#big
+{
+    pointer-events: none;
+    user-select: none;
+}
+
+#title
+{
+    pointer-events: none;
+    user-select: none;
+}
+
+body
+{
+    background-image: url("background.jpg");
+    
+}
