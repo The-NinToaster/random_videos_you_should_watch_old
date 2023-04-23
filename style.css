@@ -3,12 +3,6 @@
     padding: 0;
 }
 
-.clr{
-    height: 30px;
-    width: 30px;
-    background-color: aqua;
-}
-
 #follow{
     position: absolute;
     -webkit-touch-callout: none;
@@ -25,19 +19,7 @@
     user-select: none;
 }
 
-#big
-{
-    pointer-events: none;
-    user-select: none;
-}
-
 #title
-{
-    pointer-events: none;
-    user-select: none;
-}
-
-#turt
 {
     pointer-events: none;
     user-select: none;

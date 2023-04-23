@@ -1,0 +1,12 @@
+{
+  "name": "turtle-draw",
+  "version": "1.0.0",
+  "description": "web dev as2",
+  "homepage": "https://thenintoaster.com/turtle-draw",
+  "main": "paint.js",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "author": "",
+  "license": "ISC"
+}

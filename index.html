@@ -5,60 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     	<!-- ****** faviconit.com favicons ****** -->
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
-	<link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
-	<link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
-	<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-	<link rel="apple-touch-icon" href="/favicon-57.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="/favicon/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="/favicon/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16.png">
+	<link rel="apple-touch-icon" href="/favicon/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon-180.png">
 	<meta name="msapplication-TileColor" content="#FFFFFF">
-	<meta name="msapplication-TileImage" content="/favicon-144.png">
+	<meta name="msapplication-TileImage" content="/favicon/favicon-144.png">
 	<meta name="msapplication-config" content="/browserconfig.xml">
 	<!-- ****** faviconit.com favicons ****** -->
-    
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="func.js"></script>
 </head>
-<title>Painting Moment!!!!!</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Random Videos you should watch!</title>
 <body>
-    <div align = "center">
-	<img id = "turt" src="Turtle-01.gif">
-	<img id = "title" src="title.gif">
-	<img id = "turt" src="Turtle-01.gif">
-	</div>
-    <div id="follow"><img id="img" src="/pencil up.png" height = 30px></div>
-    <div align ="center">
-    <canvas id="canvas" style ="border:5px solid #100000; background-color: white;"></canvas>
-	</div>
-    <div align = "center">
-    <button class="clear">Clear</button>
-	</div>
-	<div align = "center">
-    <p style = "padding: 10px;">Click and Drag on the canvas to make the turtle draw,
-		the Turtle will follow your cursor within the canvas!
-	</p>
-	<p style = "padding-bottom: 10px;">KNOWN BUG: Resizing the page can throw off the turtle's initial position. Refresh the page to fix it</p>
-	<div align = "center">
-	<img id = "thought" width = 400 src = "/thought.gif" onclick="togglePlay()"/>
-	<audio id="Saul" src="nokia_better_call_saul.mp3" preload="auto"></audio>
-    <img id ="big" src="/pencil down.png"/>
-	<p>You can also pause the turtle's thoughts by clicking on the thought bubble</p>
-    </div>
-	<p style="padding: 20px">Made with <span style="color: #e25555;">&#9829;</span> by <a href="https://github.com/The-NinToaster"> The-NinToaster</a></p>
-	<a href="https://www.youtube.com/watch?v=_JwNf6aJfr0">Click here for Audio Source</a>	
-</div>
-  
 
+	<div align="center">
+		<img id="img" src="kirby-dancing.gif" height="50px">
+		<img id="img" src="_3dtext2gif_ykxhxhkyxlit.gif" height="150px">
+		<img id="img" src="kirby-dancing.gif" height="50px">
+	</div><br>
+
+	<div id="big div" align="center">
+
+		<div id="video"></div>
+		<div id="video_title" ></div>
+		<div id="video_channel"></div>
+		<div id="video_suggested"></div><br>
+		<button id="refresh" onclick="refresh()">Refresh</button><br>
+	</div><br>
+
+
+
+	<div id="formdiv" align="center">
+		<p id="formdiv_1">Put a youtube video to the list down below!</p>
+		<p id="formdiv_2">Note: If the video has already been suggested, it will not be added to the list</p><br>
+		<form id="suggestion" form action = "put.php" method="post">
+			<label for="link">Link to YouTube video (required!)</label><br>
+			<input type="text" 
+				id="link" 
+				name="link" 
+				placeholder="https://www.youtube.com/watch?v=KMU0tzLwhbE"
+				required><br><br>
+			<label for="title">Title of the Video (required!)</label><br>
+			<input type="text" 
+				id="title" 
+				name="title" 
+				required><br><br>
+			<label for="channel">Channel name (optional!)</label><br>
+			<input type="text" 
+				id="channel" 
+				name="uploader"><br><br>
+			<label for="name">Your Name (optional!)</label><br>
+			<input id="name" 
+				type="text" 
+				name="othertext"><br><br>
+			<button>Submit</button>
+		</form>
+		<div id="formresponse"></div><br>
+		
+		<a href="suggesthistory.php">See Suggestion History</a><br>
+		
+		<p style="padding: 20px">Made with <span style="color: #e25555;">&#9829;</span> by <a href="https://github.com/The-NinToaster"> The-NinToaster</a> in like 1 day</p>
+		</div>
+
+	
 </body>
-<script src="/paint.js"></script>
 </html>
